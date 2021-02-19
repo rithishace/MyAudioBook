@@ -90,7 +90,7 @@ def homepage():
                     pix.writeImage(output,"jpeg")
                     k+=1
             mytext = []
-            pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+            #pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
             #os.remove(path)
          # Here we load the image(s) created in Text_to_speech folder and read the text in image via pytesseract Optical Character Recognition (OCR) software
             # thus reading text in images and giving us a string
