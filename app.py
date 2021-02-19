@@ -89,4 +89,4 @@ def readingtext():
     return render_template('upload.html',texts=texts)
 
 if __name__ == "__main__":
-    app.run(port=5000, debug=True)
+    app.run( debug=True)
