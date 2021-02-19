@@ -68,7 +68,7 @@ def homepage():
             if lp == 0:
                 page = doc.loadPage(fp-1) #number of page
                 zoom_x = 2.0
-                image_counter+=1
+               
                 zoom_y = 2.0
                 mat = fitz.Matrix(zoom_x,zoom_y)
                 pix = page.getPixmap(matrix=mat)
@@ -81,7 +81,7 @@ def homepage():
                     page = doc.loadPage(i) #number of page
                     zoom_x = 2.0
                     zoom_y = 2.0
-                    image_counter+=1
+                    
                     mat = fitz.Matrix(zoom_x,zoom_y)
                     pix = page.getPixmap(matrix=mat)
                     output = os.path.join(app.config['UPLOAD_FOLDER'], "image_"+str(k)+"_to_read.jpg")
