@@ -3,7 +3,7 @@ from flask_cors import cross_origin
 from flask import Flask, render_template, request, redirect, url_for
 #from main import text_to_speech
 
-import PyPDF2
+
 from PIL import Image 
 import pytesseract 
 import sys 
