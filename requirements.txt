@@ -19,18 +19,18 @@ isodate==0.6.0
 itsdangerous==1.1.0
 Jinja2==2.11.2
 
-lxml==4.6.2
+
 MarkupSafe==1.1.1
 
-networkx==2.5
+
 
 packaging==20.9
-pandas==1.2.2
+
 pathlib==1.0.1
 pdf2image==1.14.0
 Pillow==8.1.0
 prov==2.0.0
-pycryptodome==3.10.1
+
 pydot==1.4.2
 PyMuPDF==1.18.8
 pyparsing==2.4.7
