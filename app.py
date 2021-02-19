@@ -1,12 +1,12 @@
 # Importing the necessary Libraries
 from flask_cors import cross_origin
 from flask import Flask, render_template, request, redirect, url_for
-#from main import text_to_speech
+
 import fitz
 from PIL import Image 
 import pytesseract 
 import sys 
-from pdf2image import convert_from_path 
+ 
 import os 
 import random
 import shutil
@@ -44,8 +44,7 @@ def homepage():
     os.makedirs(UPLOAD_FOLDER)  
     app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-    # limit upload size upto 8mb
-    #app.config['MAX_CONTENT_LENGTH'] = 8 * 1024 * 1024
+    
 # import request
     if request.method == 'POST':
         pageno = request.form['page']
@@ -60,8 +59,7 @@ def homepage():
             filename = uploaded_file.filename
             uploaded_file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             path=os.path.join(app.config['UPLOAD_FOLDER'], filename)
-            #pages = convert_from_path(path, 500,first_page=fp ,last_page=lp,poppler)
-            image_counter = 1
+            
             global texts
             
             doc = fitz.open(path)
@@ -90,10 +88,7 @@ def homepage():
                     pix.writeImage(output,"jpeg")
                     k+=1
             mytext = []
-            #pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-            #os.remove(path)
-         # Here we load the image(s) created in Text_to_speech folder and read the text in image via pytesseract Optical Character Recognition (OCR) software
-            # thus reading text in images and giving us a string
+            
             for file in os.listdir(os.path.join(app.config['UPLOAD_FOLDER'])):   
                 if allowed_file(file):
 
@@ -120,19 +115,7 @@ def homepage():
                             texts = texts + " " + str(line)
                         else:
                             texts = texts + " " + line + "\n"
-            '''
-            for page in pages:
-                filename='page_'+str(image_counter)+'.jpg'
-                page.save(os.path.join(app.config['UPLOAD_FOLDER'], filename),'jpeg')
-                image_counter+=1
-            filelimit=image_counter-1
-            for i in range (1,filelimit+1):
-                filename = "page_"+str(i)+".jpg"
-                text = str(((pytesseract.image_to_string(Image.open(os.path.join(app.config['UPLOAD_FOLDER'], filename)))))) 
-                text = text.replace('-\n', ' ')
-                texts+=text
-            #os.remove(path)
-            '''
+            
             #shutil.rmtree(app.config['UPLOAD_FOLDER']) 
              
             
