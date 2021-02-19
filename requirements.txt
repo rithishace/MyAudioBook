@@ -1,27 +1,55 @@
 certifi==2020.12.5
 chardet==4.0.0
+ci-info==0.2.0
 click==7.1.2
 comtypes==1.1.7
+configobj==5.0.6
+configparser==5.0.1
+decorator==4.4.2
+etelemetry==0.2.2
+filelock==3.0.12
+fitz==0.0.1.dev2
 Flask==1.1.2
 Flask-Cors==3.0.9
+future==0.18.2
 gunicorn==20.0.4
+httplib2==0.19.0
 idna==2.10
+isodate==0.6.0
 itsdangerous==1.1.0
 Jinja2==2.11.2
 
+lxml==4.6.2
 MarkupSafe==1.1.1
 
+networkx==2.5
+nibabel==3.2.1
+nipype==1.6.0
+numpy==1.20.1
+packaging==20.9
+pandas==1.2.2
 pathlib==1.0.1
 pdf2image==1.14.0
 Pillow==8.1.0
+prov==2.0.0
 pycryptodome==3.10.1
-
+pydot==1.4.2
+PyMuPDF==1.18.8
+pyparsing==2.4.7
+PyPDF2==1.26.0
 
 pytesseract==0.3.7
+python-dateutil==2.8.1
+pyttsx3==2.90
+pytz==2021.1
 
-
+pyxnat==1.4
+rdflib==5.0.0
 requests==2.25.1
+scipy==1.6.1
+simplejson==3.17.2
 six==1.15.0
 tenacity==5.1.5
+traits==6.2.0
 urllib3==1.26.3
 Werkzeug==1.0.1
