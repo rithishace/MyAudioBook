@@ -73,7 +73,8 @@ def homepage():
                 text = str(((pytesseract.image_to_string(Image.open(os.path.join(app.config['UPLOAD_FOLDER'], filename)))))) 
                 text = text.replace('-\n', ' ')
                 texts+=text
-            os.remove(path)
+            #os.remove(path)
+            shutil.rmtree(app.config['UPLOAD_FOLDER']) 
              
             
         return redirect(url_for('readingtext',texts=filename))
