@@ -54,12 +54,12 @@ def homepage():
         print(lp)
         if lp==0:
             lp=fp
-        pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+        
         if uploaded_file.filename != '':
             filename = uploaded_file.filename
             uploaded_file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             path=os.path.join(app.config['UPLOAD_FOLDER'], filename)
-            pages = convert_from_path(path, 500,first_page=fp ,last_page=lp,poppler_path = r'C:\flaskenv\Lib\site-packages\poppler-21.02.0\Library\bin')
+            pages = convert_from_path(path, 500,first_page=fp ,last_page=lp)
             image_counter = 1
             global texts
             
