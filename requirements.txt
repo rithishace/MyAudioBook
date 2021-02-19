@@ -16,10 +16,10 @@ pdf2image==1.14.0
 Pillow==8.1.0
 pycryptodome==3.10.1
 
-pypiwin32==223
+
 pytesseract==0.3.7
 
-pywin32==228
+
 requests==2.25.1
 six==1.15.0
 tenacity==5.1.5
