@@ -68,12 +68,13 @@
 					.field {
 					  margin-bottom: 2em;
 					}
-					input {
-					  font-size: 24px;
-					  padding: 0.5em;
+					p {
+					  font-size: 18 px;
+					  padding: 1em;
 					  border: 1px solid rgba(13, 18, 43, 0.25);
 					  border-radius: 6px;
-					  width: 75%;
+					  width: 90%;
+					  
 					  display: inline-block;
 					  transition: border-color 0.25s;
 					  text-align: center;
@@ -131,27 +132,28 @@
           <header>
               <h1>Audio Book</h1>
           </header>
-
+		  <div class='field'>
+			<button id=play > Play</button> 
+			<button id=pause>Pause</button>
+			<button id=stop>Stop</button>
+		<select id="voices">
+		
+			</select>
+		<br><span id="speechwarning">(I'm on developing stage)</span>
+		</div>
 <form method="post" enctype="multipart/form-data">
-    <div class='field'>
-      <label>Captured these on upload file</label>      
+    
+	<div class='field'>
+      <h2>Now reading .....</h2>      
       <p>{{texts}}</p>
       
-    
+	  
 </div> 
 
   
   
 </form>
-<div class='field'>
-	<button id=play > Say it</button> 
-	<button id=pause>pause</button>
-	<button id=stop>Stop</button>
-<select id="voices">
 
-	</select>
-<br><span id="speechwarning">(I'm on developing stage)</span>
-</div>
 <footer>
     <p>
         Built by <a href="">Rithish kumar</a>
